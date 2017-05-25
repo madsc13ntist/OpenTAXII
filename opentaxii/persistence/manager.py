@@ -59,7 +59,7 @@ class PersistenceManager(object):
         '''
 
         for blob in services_config:
-            service = blob_to_service_entity(services_config[blob][0])
+            service = blob_to_service_entity(services_config[blob])
             self.create_service(service)
 
             log.info("service.created", id=service.id, type=service.type)
